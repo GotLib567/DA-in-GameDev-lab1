@@ -40,37 +40,56 @@
 ## Задание 1
 Ход работы:
 - Вывод сообщения "Hello world" на Python с помощью приложения PyCharm:
+
 ![lab1](https://user-images.githubusercontent.com/80561050/192602848-46a88cf6-9fc5-47c5-aa00-fdd1c11ab0d3.png)
+
 - Вывод сообщения "Hello world" в Unity:
+
 ![lab1(1)](https://user-images.githubusercontent.com/80561050/192835769-9e2edd94-46ac-4653-a2b2-425f063cf97e.png)
 
 ## Задание 2
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
 
-- Перечисленные в этом туториале действия могут быть выполнены запуском на исполнение скрипт-файла, доступного [в репозитории](https://github.com/Den1sovDm1triy/hfss-scripting/blob/main/ScreatingSphereInAEDT.py).
-- Для запуска скрипт-файла откройте Ansys Electronics Desktop. Перейдите во вкладку [Automation] - [Run Script] - [Выберите файл с именем ScreatingSphereInAEDT.py из репозитория].
+Возникли технические проблемы с Anaconda и Jupyter Notebook. Выполнил задание в google.colab.
 
-```py
+- Произвёл подготовку данных для работы с алгоритмом линейной регрессии:
 
-import ScriptEnv
-ScriptEnv.Initialize("Ansoft.ElectronicsDesktop")
-oDesktop.RestoreWindow()
-oProject = oDesktop.NewProject()
-oProject.Rename("C:/Users/denisov.dv/Documents/Ansoft/SphereDIffraction.aedt", True)
-oProject.InsertDesign("HFSS", "HFSSDesign1", "HFSS Terminal Network", "")
-oDesign = oProject.SetActiveDesign("HFSSDesign1")
-oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreateSphere(
-	[
-		"NAME:SphereParameters",
-		"XCenter:="		, "0mm",
-		"YCenter:="		, "0mm",
-		"ZCenter:="		, "0mm",
-		"Radius:="		, "1.0770329614269mm"
-	], 
-)
+![task2(1)](https://user-images.githubusercontent.com/80561050/192855951-ecb3562a-b0cd-4d66-99fb-ac7cd22eacee.png)
 
-```
+- Определил связанные функции:
+
+![image](https://user-images.githubusercontent.com/80561050/192857590-c3e7b37f-d50c-4f03-9444-cdda87a23e25.png)
+
+- Начал итерацию:
+Шаг 1. Инициализация и модель итеративной оптимизации.
+
+![image](https://user-images.githubusercontent.com/80561050/192857813-94051069-f74b-4ec5-b328-0b5de508dcbb.png)
+
+Шаг 2. На второй итерации отображаются значения параметров, значения
+потерь и эффекты визуализации после итерации.
+
+![image](https://user-images.githubusercontent.com/80561050/192858168-2f0ede6c-bc07-4ab9-a77a-1e1b1ebf14cf.png)
+
+Шаг 3. Третья итерация показывает значения параметров, значения потерь и
+визуализацию после итерации.
+
+![image](https://user-images.githubusercontent.com/80561050/192858316-3136a853-c58a-456a-9042-91c11cfa96b8.png)
+
+Шаг 4. На четвертой итерации отображаются значения параметров, значения
+потерь и эффекты визуализации.
+
+![image](https://user-images.githubusercontent.com/80561050/192858428-41a8c950-62ec-416c-9acc-a81ebf797667.png)
+
+Шаг 5. Пятая итерация показывает значение параметра, значение потерь и
+эффект визуализации после итерации.
+
+![image](https://user-images.githubusercontent.com/80561050/192858578-20bee7df-37fe-4c5f-af1a-932d3b6c86f2.png)
+
+Шаг 6. 10000-я итерация, показывающая значения параметров, потери и
+визуализацию после итерации.
+
+![image](https://user-images.githubusercontent.com/80561050/192858734-df6ebdbe-a05c-4a4f-b36f-00b88e2b8cbb.png)
+
+Ссылка на google.colab: https://colab.research.google.com/drive/1eagCvqSkHrHkt169l7NNPqewGpX0ReVt?usp=sharing
 
 ## Задание 3
 ### Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
@@ -102,7 +121,8 @@ oEditor.CreateSphere(
 
 ## Выводы
 
-Абзац умных слов о том, что было сделано и что было узнано.
+Я установил все утилиты (PyCharm, Unity, VS Code, .Net, Anaconda) для работы с заданиями и ознакомился с основными операторами зыка Python на
+примере реализации линейной регрессии.
 
 | Plugin | README |
 | ------ | ------ |
